@@ -1,0 +1,84 @@
+[33mcommit 8bb5abe0506d7e4600f953e0151d02bc1ffa9b04[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m)[m
+Author: Dharma <smkd3081@gmail.com.com>
+Date:   Wed Nov 12 21:11:37 2025 +0530
+
+     Backend folder
+
+ backend                                            |   1 [31m-[m
+ backend/demo/.idea/.gitignore                      |   3 [32m++[m
+ backend/demo/.idea/compiler.xml                    |  19 [32m++++++++++++[m
+ backend/demo/.idea/encodings.xml                   |   6 [32m++++[m
+ backend/demo/.idea/jarRepositories.xml             |  20 [32m++++++++++++[m
+ backend/demo/.idea/misc.xml                        |  12 [32m++++++++[m
+ backend/demo/HELP.md                               |  29 [32m++++++++++++++++++[m
+ backend/demo/target/classes/application.properties |  34 [32m+++++++++++++++++++++[m
+ .../example/demo/Controller/MailController.class   | Bin [31m0[m -> [32m1479[m bytes
+ .../demo/Controller/ProductController.class        | Bin [31m0[m -> [32m8830[m bytes
+ .../demo/Controller/SupplierController.class       | Bin [31m0[m -> [32m4640[m bytes
+ .../classes/com/example/demo/DemoApplication.class | Bin [31m0[m -> [32m1398[m bytes
+ .../classes/com/example/demo/Models/Product.class  | Bin [31m0[m -> [32m5632[m bytes
+ .../classes/com/example/demo/Models/Supplier.class | Bin [31m0[m -> [32m4853[m bytes
+ .../com/example/demo/Service/MailService.class     | Bin [31m0[m -> [32m3504[m bytes
+ .../com/example/demo/Service/ProductService.class  | Bin [31m0[m -> [32m4226[m bytes
+ .../demo/Service/ProductSpecification.class        | Bin [31m0[m -> [32m4278[m bytes
+ .../com/example/demo/Service/SupplierService.class | Bin [31m0[m -> [32m2776[m bytes
+ .../com/example/demo/config/CorsConfig$1.class     | Bin [31m0[m -> [32m1655[m bytes
+ .../com/example/demo/config/CorsConfig.class       | Bin [31m0[m -> [32m764[m bytes
+ .../demo/repository/ProductRepository.class        | Bin [31m0[m -> [32m1306[m bytes
+ .../demo/repository/SupplierRepository.class       | Bin [31m0[m -> [32m440[m bytes
+ backend/demo/target/demo-0.0.1-SNAPSHOT.jar        | Bin [31m0[m -> [32m51765421[m bytes
+ .../demo/target/demo-0.0.1-SNAPSHOT.jar.original   | Bin [31m0[m -> [32m9361[m bytes
+ backend/demo/target/maven-archiver/pom.properties  |   3 [32m++[m
+ .../compile/default-compile/createdFiles.lst       |   6 [32m++++[m
+ .../compile/default-compile/inputFiles.lst         |   6 [32m++++[m
+ .../default-testCompile/createdFiles.lst           |   1 [32m+[m
+ .../testCompile/default-testCompile/inputFiles.lst |   1 [32m+[m
+ .../com/example/demo/DemoApplicationTests.class    | Bin [31m0[m -> [32m531[m bytes
+ 30 files changed, 140 insertions(+), 1 deletion(-)
+
+[33mcommit c2742ed03d0d578501c6ac3c5e978a796d0a644a[m[33m ([m[1;31morigin/main[m[33m)[m
+Author: Dharma <smkd3081@gmail.com.com>
+Date:   Wed Nov 12 20:37:48 2025 +0530
+
+    Added backend folder (Spring Boot project)
+
+ .env                                               |    1 [32m+[m
+ backend                                            |    1 [32m+[m
+ frontend/.env                                      |    1 [32m+[m
+ frontend/.gitignore                                |   24 [32m+[m
+ frontend/README.md                                 |   16 [32m+[m
+ frontend/eslint.config.js                          |   29 [32m+[m
+ frontend/index.html                                |   13 [32m+[m
+ frontend/package-lock.json                         | 3438 [32m++++++++++++++++++++[m
+ frontend/package.json                              |   28 [32m+[m
+ frontend/public/vite.svg                           |    1 [32m+[m
+ frontend/src/App.css                               |    0
+ frontend/src/App.jsx                               |   48 [32m+[m
+ frontend/src/api/productService.js                 |   59 [32m+[m
+ frontend/src/api/supplierService.js                |   29 [32m+[m
+ frontend/src/components/Loader.jsx                 |    0
+ frontend/src/components/Navbar.jsx                 |   81 [32m+[m
+ frontend/src/components/ProductCrad.jsx            |    0
+ frontend/src/index.css                             |   15 [32m+[m
+ frontend/src/main.jsx                              |   10 [32m+[m
+ frontend/src/pages/Dashboard.css                   |  508 [32m+++[m
+ frontend/src/pages/Dashboard.jsx                   |  372 [32m+++[m
+ frontend/src/pages/NotFound.jsx                    |    0
+ frontend/src/pages/ProductsPage/AddProducts.jsx    |  177 [32m+[m
+ frontend/src/pages/ProductsPage/EditProduct.jsx    |  156 [32m+[m
+ .../src/pages/ProductsPage/EditProduct.module.css  |   53 [32m+[m
+ frontend/src/pages/ProductsPage/InvoicePage.jsx    |  145 [32m+[m
+ frontend/src/pages/ProductsPage/LowStockAlert.jsx  |  224 [32m++[m
+ .../pages/ProductsPage/LowStockAlert.module.css    |  433 [32m+++[m
+ frontend/src/pages/ProductsPage/ProductList.jsx    |  244 [32m++[m
+ .../src/pages/ProductsPage/ProductList.module.css  |  302 [32m++[m
+ frontend/src/pages/ProductsPage/RestockProduct.jsx |    0
+ frontend/src/pages/ProductsPage/SellProduct.css    |  405 [32m+++[m
+ frontend/src/pages/ProductsPage/SellProducts.jsx   |  226 [32m++[m
+ frontend/src/pages/Reports.css                     |  365 [32m+++[m
+ frontend/src/pages/Reports.jsx                     |  253 [32m++[m
+ frontend/src/pages/SupplierPage/AddSupplier.jsx    |   97 [32m+[m
+ frontend/src/pages/SupplierPage/EditSupplier.jsx   |   94 [32m+[m
+ frontend/src/pages/SupplierPage/SupplierList.jsx   |  117 [32m+[m
+ frontend/vite.config.js                            |    7 [32m+[m
+ 39 files changed, 7972 insertions(+)
