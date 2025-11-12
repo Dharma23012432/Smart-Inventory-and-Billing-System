@@ -1,0 +1,15 @@
+/* src/index.css or src/App.css */
+
+body {
+    /* 1. Set the background color */
+    background-color: #cae0f0; 
+    
+    /* 2. OPTIONAL but recommended: Remove default browser margin */
+    margin: 0; 
+    padding: 0;
+}
+
+/* Ensure the main React root element (if used) also covers the space */
+#root {
+    min-height: 100vh;
+}
